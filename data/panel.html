@@ -1,0 +1,109 @@
+<style>
+    * { font-family: Arial, Verdana, sans-serif; }
+    h1 { font-size: 120%; color: #000; padding: 0; margin: 0.5em 0 0 0; }
+    h2 { font-size: 100%; color: #333; padding: 0; margin: 0.5em 0 0 0;}
+    p { color: #666; padding: 0; margin: 0.2em 0 0 0; }
+    p, li, a { font-size: 90%; }
+    a { text-decoration: none; }
+    ul { list-style-type: none; margin: 0; padding: 0.2em; }
+    ul#menu li { display: inline; }
+    label[for="follow"] { padding: 0 0 0 20px; background: transparent url(icons/follow.png) top left no-repeat; }
+    label[for="watch_started"] { padding: 0 0 0 20px; background: transparent url(icons/watch_started.png) top left no-repeat; }
+    label[for="gollum"] { padding: 0 0 0 20px; background: transparent url(icons/wiki.png) top left no-repeat; }
+    label[for="push"] { padding: 0 0 0 20px; background: transparent url(icons/push.png) top left no-repeat; }
+    label[for="issues_opened"] { padding: 0 0 0 20px; background: transparent url(icons/issues_opened.png) top left no-repeat; }
+    label[for="issues_reopened"] { padding: 0 0 0 20px; background: transparent url(icons/issues_reopened.png) top left no-repeat; }
+    label[for="issues_comment"] { padding: 0 0 0 20px; background: transparent url(icons/issues_comment.png) top left no-repeat; }
+    label[for="issues_closed"] { padding: 0 0 0 20px; background: transparent url(icons/issues_closed.png) top left no-repeat; }
+    label[for="fork"] { padding: 0 0 0 20px; background: transparent url(icons/fork.png) top left no-repeat; }
+    label[for="create"] { padding: 0 0 0 20px; background: transparent url(icons/create.png) top left no-repeat; }
+    label[for="public"] { padding: 0 0 0 20px; background: transparent url(icons/public.png) top left no-repeat; }
+    label[for="member_add"] { padding: 0 0 0 20px; background: transparent url(icons/member_add.png) top left no-repeat; }
+    label[for="commit_comment"] { padding: 0 0 0 20px; background: transparent url(icons/comment.png) top left no-repeat; }
+    p.forkme { font-size: 0.8em; color: #999; margin: 0.5em 0.5em 0 0; text-align: right; }
+</style>
+<h1>Github News Feed Filter</h1>
+<p>Choose what kind of alerts you want to see:
+    <ul id="options">
+        <li>
+            <h2>People</h2>
+        </li>
+        <li>
+            <input type="checkbox" checked="checked" id="follow"/>
+            <label for="follow">Follow</label>
+        </li>
+        <li>
+            <input type="checkbox" checked="checked" id="member_add"/>
+            <label for="member_add">Member add</label>
+        </li>
+        <li>
+            <h2>Repositories</h2>
+        </li>
+        <li>
+            <input type="checkbox" checked="checked" id="watch_started"/>
+            <label for="watch_started">Watch started</label>
+        </li>
+        <li>
+            <input type="checkbox" checked="checked" id="gollum"/>
+            <label for="gollum">Gollum</label>
+        </li>
+        <li>
+            <input type="checkbox" checked="checked" id="push"/>
+            <label for="push">Push</label>
+        </li>
+        <li>
+            <input type="checkbox" checked="checked" id="fork"/>
+            <label for="fork">Fork</label>
+        </li>
+        <li>
+            <input type="checkbox" checked="checked" id="commit_comment"/>
+            <label for="commit_comment">Commit comment</label>
+        </li>
+        <li>
+            <input type="checkbox" checked="checked" id="create"/>
+            <label for="create">Create</label>
+        </li>
+        <li>
+            <input type="checkbox" checked="checked" id="public"/>
+            <label for="public">Public</label>
+        </li>
+        <li>
+            <h2>Issues</h2>
+        </li>
+        <li>
+            <input type="checkbox" checked="checked" id="issues_opened"/>
+            <label for="issues_opened">Opened</label>
+        </li>
+        <li>
+            <input type="checkbox" checked="checked" id="issues_reopened"/>
+            <label for="issues_reopened">Reopened</label>
+        <li>
+            <input type="checkbox" checked="checked" id="issues_comment"/>
+            <label for="issues_comment">Comment</label>
+        </li>
+        <li>
+            <input type="checkbox" checked="checked" id="issues_closed"/>
+            <label for="issues_closed">Closed</label>
+        </li>
+
+    </ul>
+    <ul id="menu">
+        <li>
+            Select:
+        </li>
+        <li>
+            <a href="javascript: void(0);" id="all">All</a>,
+        </li>
+        <li>
+            <a href="javascript: void(0);" id="none">None</a,>
+        </li>
+        <li>
+            <a href="javascript: void(0);" id="invert">Invert</a>
+        </li>
+    </ul>
+</p>
+<button id="ok">Ok</button>
+<button id="cancel">Cancel</button>
+<p class="forkme">
+    Fork me at <a href="https://github.com/matagus/github-news-feed-filter" id="forkme">Github</a>
+</p>
