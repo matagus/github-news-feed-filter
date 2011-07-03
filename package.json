@@ -1,9 +1,10 @@
 {
     "name": "github-news-feed-filter",
-    "license": "MPL 1.1/GPL 2.0/LGPL 2.1",
+    "license": "MPL 1.1",
     "author": "Matias Agustin Mendez",
     "version": "0.1",
     "fullName": "Github News Feed Filter",
     "id": "jid1-6BvTzyxnssbxqA",
-    "description": "Lets you filter out the alerts you don't want to see."
+    "description": "Lets you filter out the alerts you don't want to see.",
+    "homepage": "https://github.com/matagus/github-news-feed-filter"
 }
