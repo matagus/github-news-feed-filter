@@ -1,6 +1,8 @@
-# Github News Feed Filter add-on.
+# Filter for Github News Feed addon.
 
-Firefox 4.x addon to filter your Github's news feed showing you only the alerts you want to see.
+Firefox addon to filter your Github's news feed showing you only the alerts you want to see. It works under Firefox 5.x to 12.x.
+
+Install it [now](https://addons.mozilla.org/en-US/firefox/addon/github-news-feed-filter/).
 
 ## How does it looks like?
 
