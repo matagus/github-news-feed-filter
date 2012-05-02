@@ -6,4 +6,4 @@ Install it [now](https://addons.mozilla.org/en-US/firefox/addon/github-news-feed
 
 ## How does it looks like?
 
-![sample screenshot](https://github.com/matagus/github-news-feed-filter/raw/master/doc/screenshots/one.png "sample screenshot for github-news-feed-filter")
+![sample screenshot](https://github.com/matagus/github-news-feed-filter/raw/master/doc/screenshots/four.png "sample screenshot for github-news-feed-filter")
