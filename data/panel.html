@@ -22,8 +22,138 @@
     label[for="member_add"] { padding: 0 0 0 20px; background: transparent url(icons/member_add.png) top left no-repeat; }
     label[for="commit_comment"] { padding: 0 0 0 20px; background: transparent url(icons/comment.png) top left no-repeat; }
     p.forkme { font-size: 0.75em; color: #999; margin: 0.4em 0.4em 0 0; text-align: right; }
+    #footer { width: 100%; text-align: right; }
+    /* ------------------------------------------
+    CSS3 GITHUB BUTTONS (Nicolas Gallagher)
+    Licensed under Unlicense
+    http://github.com/necolas/css3-github-buttons
+    ------------------------------------------ */
+    /* ------------------------------------------------------------------------------------------------------------- BUTTON */
+    .button {
+        position: relative;
+        overflow: visible;
+        display: inline-block;
+        padding: 0.5em 1em;
+        border: 1px solid #d4d4d4;
+        margin: 0;
+        text-decoration: none;
+        text-shadow: 1px 1px 0 #fff;
+        font:11px/normal sans-serif;
+        color: #333;
+        white-space: nowrap;
+        cursor: pointer;
+        outline: none;
+        background-color: #ececec;
+        background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#f4f4f4), to(#ececec));
+        background-image: -moz-linear-gradient(#f4f4f4, #ececec);
+        background-image: -o-linear-gradient(#f4f4f4, #ececec);
+        background-image: linear-gradient(#f4f4f4, #ececec);
+        -webkit-background-clip: padding;
+        -moz-background-clip: padding;
+        -o-background-clip: padding-box;
+        /*background-clip: padding-box;*/ /* commented out due to Opera 11.10 bug */
+        -webkit-border-radius: 0.2em;
+        -moz-border-radius: 0.2em;
+        border-radius: 0.2em;
+        /* IE hacks */
+        zoom: 1;
+        *display: inline;
+    }
+
+    .button:hover,
+    .button:focus,
+    .button:active,
+    .button.active {
+        border-color: #3072b3;
+        border-bottom-color: #2a65a0;
+        text-decoration: none;
+        text-shadow: -1px -1px 0 rgba(0,0,0,0.3);
+        color: #fff;
+        background-color: #3C8DDE;
+        background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#599bdc), to(#3072b3));
+        background-image: -moz-linear-gradient(#599bdc, #3072b3);
+        background-image: -o-linear-gradient(#599bdc, #3072b3);
+        background-image: linear-gradient(#599bdc, #3072b3);
+    }
+
+    .button:active,
+    .button.active {
+        border-color: #2a65a0;
+        border-bottom-color: #3884CF;
+        background-color: #3072b3;
+        background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#3072b3), to(#599bdc));
+        background-image: -moz-linear-gradient(#3072b3, #599bdc);
+        background-image: -o-linear-gradient(#3072b3, #599bdc);
+        background-image: linear-gradient(#3072b3, #599bdc);
+    }
+
+    /* overrides extra padding on button elements in Firefox */
+    .button::-moz-focus-inner {
+        padding: 0;
+        border: 0;
+    }
+
+    .button.primary { font-weight: bold; }
+    /* ------------------------------------------------------------------------------------------------------------- BUTTON GROUPS */
+    /* ............................................................................................................. Standard */
+
+    .button-group {
+        display: inline-block;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        /* IE hacks */
+        zoom: 1;
+        *display: inline;
+    }
+
+    .button + .button,
+    .button + .button-group,
+    .button-group + .button,
+    .button-group + .button-group {
+        margin-left: 15px;
+    }
+
+    .button-group li {
+        float: left;
+        padding: 0;
+        margin: 0;
+    }
+
+    .button-group .button {
+        float: left;
+        margin-left: -1px;
+    }
+
+    .button-group > .button:not(:first-child):not(:last-child),
+    .button-group li:not(:first-child):not(:last-child) .button {
+        -webkit-border-radius: 0;
+        -moz-border-radius: 0;
+        border-radius: 0;
+    }
+
+    .button-group > .button:first-child,
+    .button-group li:first-child .button {
+        margin-left: 0;
+        -webkit-border-top-right-radius: 0;
+        -webkit-border-bottom-right-radius: 0;
+        -moz-border-radius-topright: 0;
+        -moz-border-radius-bottomright: 0;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+
+    .button-group > .button:last-child,
+    .button-group li:last-child > .button {
+        -webkit-border-top-left-radius: 0;
+        -webkit-border-bottom-left-radius: 0;
+        -moz-border-radius-topleft: 0;
+        -moz-border-radius-bottomleft: 0;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+    }
 </style>
-<h1>Github News Feed Filter</h1>
+<h1>Filter for Github News Feed</h1>
 <p>Choose what kind of alerts you want to see:
     <ul id="options">
         <li>
@@ -109,8 +239,11 @@
         </li>
     </ul>
 </p>
-<button id="ok">Ok</button>
-<button id="cancel">Cancel</button>
+<div id="footer" class="button-group">
+    <a id="ok" class="button primary" href="#">Go filter!</a>
+    <a id="save" class="button" href="#">Save</a>
+    <a id="cancel" class="button" href="#">Cancel</a>
+</div>
 <p class="forkme">
     Fork me at <a href="https://github.com/matagus/github-news-feed-filter" id="forkme">Github</a>
 </p>

@@ -16,6 +16,20 @@ $("#cancel").click(function(event) {
   self.port.emit('cancel.click');
 });
 
+$("#save").click(function(event) {
+  var filters = [];
+  $('#options input[type="checkbox"]').each(function(i, elem) {
+    var checkbox = $(elem);
+    if (checkbox.attr('checked')) {
+      filters.push(checkbox.attr("id"));
+    }
+  });
+  // Intercept the click, passing it to the addon, which will load it in a tab.
+  event.stopPropagation();
+  event.preventDefault();
+  self.port.emit('save.click', filters);
+});
+
 $("#forkme").click(function(event) {
   // Intercept the click, passing it to the addon, which will load it in a tab.
   event.stopPropagation();
@@ -40,4 +54,11 @@ $("#invert").click(function(event) {
       checkbox.attr('checked', 'checked');
     }
   });
+});
+
+self.port.on('set-filters', function(savedFilters) {
+  $('#options input[type="checkbox"]').removeAttr("checked");
+  savedFilters.forEach(function(filterId) {
+    $("#" + filterId).attr('checked', 'checked');
+  }); 
 });
